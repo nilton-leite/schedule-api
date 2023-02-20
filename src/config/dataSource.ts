@@ -1,13 +1,13 @@
 import { ConfigService } from '@nestjs/config';
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { config } from 'dotenv';
-import { MedicalsInsurance } from './src/entities/entities/medicals-insurance.entity';
-import { Agreement } from './src/entities/entities/agreement.entity';
-import { Doctor } from './src/entities/entities/doctor.entity';
-import { Patient } from './src/entities/entities/patient.entity';
-import { Query } from './src/entities/entities/query.entity';
-import { Schedule } from './src/entities/entities/schedule.entity';
-import { Specialty } from './src/entities/entities/specialty.entity';
+import { MedicalsInsurance } from 'src/entities/entities/medicals-insurance.entity';
+import { Agreement } from 'src/entities/entities/agreement.entity';
+import { Doctor } from 'src/entities/entities/doctor.entity';
+import { Patient } from 'src/entities/entities/patient.entity';
+import { Query } from 'src/entities/entities/query.entity';
+import { Schedule } from 'src/entities/entities/schedule.entity';
+import { Specialty } from 'src/entities/entities/specialty.entity';
 
 config();
 
