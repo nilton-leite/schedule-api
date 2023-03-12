@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Doctor } from 'src/entities/entities/doctor.entity';
 import { Repository } from 'typeorm';
 import { CreateDoctorDto } from './dto/create-doctor.dto';
-import { UpdateDoctorDto } from './dto/update-doctor.dto';
+// import { UpdateDoctorDto } from './dto/update-doctor.dto';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
@@ -25,9 +25,9 @@ export class DoctorsService {
       return await this.doctorsRepository.findOneBy({ uuid });
    }
 
-   async update(uuid: string, updateDoctorDto: UpdateDoctorDto): Promise<Doctor> {
-      return await this.doctorsRepository.update(updateDoctorDto, { uuid });
-   }
+   // async update(uuid: string, updateDoctorDto: UpdateDoctorDto): Promise<Doctor> {
+   //    return await this.doctorsRepository.update(updateDoctorDto, { uuid });
+   // }
 
    async remove(uuid: string): Promise<void> {
       await this.doctorsRepository.delete({ uuid });

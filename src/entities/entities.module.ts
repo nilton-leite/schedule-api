@@ -1,15 +1,16 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Agreement } from './entities/agreement.entity';
 import { Doctor } from './entities/doctor.entity';
-import { MedicalsInsurance } from './entities/medicals-insurance.entity';
+import { DoctorInsurance } from './entities/doctorInsurance.entity';
+import { DoctorSpecialty } from './entities/doctorSpecialty.entity';
+import { HealthInsurance } from './entities/healthInsurance.entity';
 import { Patient } from './entities/patient.entity';
-import { Query } from './entities/query.entity';
+import { Queries } from './entities/query.entity';
 import { Schedule } from './entities/schedule.entity';
 import { Specialty } from './entities/specialty.entity';
 
 @Module({
-   imports: [TypeOrmModule.forFeature([Agreement, Doctor, MedicalsInsurance, Patient, Query, Schedule, Specialty])],
+   imports: [Specialty, Doctor, DoctorSpecialty, DoctorInsurance, HealthInsurance, Patient, Queries, Schedule],
    exports: [TypeOrmModule],
 })
 export class EntitiesModule {}

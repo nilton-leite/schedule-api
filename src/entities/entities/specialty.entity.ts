@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { DoctorSpecialty } from './doctorSpecialty.entity';
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Doctor } from './doctor.entity';
 
 @Entity('specialty')
 export class Specialty {
@@ -27,4 +29,7 @@ export class Specialty {
       name: 'timePerQuery',
    })
    timePerQuery: number;
+
+   @OneToMany(() => DoctorSpecialty, (doc) => doc.specialties)
+   doctorSpecialties: Doctor[];
 }

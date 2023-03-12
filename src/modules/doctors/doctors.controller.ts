@@ -22,10 +22,10 @@ export class DoctorsController {
       return this.doctorsService.findOne(uuid);
    }
 
-   @Patch(':uuid')
-   update(@Param('uuid') uuid: string, @Body() updateDoctorDto: UpdateDoctorDto) {
-      return this.doctorsService.update(uuid, updateDoctorDto);
-   }
+   // @Patch(':uuid')
+   // update(@Param('uuid') uuid: string, @Body() updateDoctorDto: UpdateDoctorDto) {
+   //    return this.doctorsService.update(uuid, updateDoctorDto);
+   // }
 
    @Delete(':uuid')
    remove(@Param('uuid') uuid: string) {
